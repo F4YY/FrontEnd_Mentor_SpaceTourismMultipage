@@ -3,7 +3,7 @@ import { Crew } from './Crew';
 import { Destination } from './Destination';
 import { Home } from './Home';
 import { BGnavbarselect, Closeicon, Headerline, Logo, Menuicon, Menulist, Mobilestack, Overlayscreen, Roundexplore, Stylednavbar } from './styled/Navbar/Navbar.styled';
-import { Hstack, Styledspacetourism, Vstack } from './styled/Spacetourism.styled';
+import { Attribution, AttributionA, Hstack, Styledspacetourism, Vstack } from './styled/Spacetourism.styled';
 import { Technology } from './Technology';
 import menuicon from './assets/shared/icon-hamburger.svg';
 import closeicon from './assets/shared/icon-close.svg';
@@ -98,6 +98,16 @@ export const Navbar = () => {
         {clickNav.activePage === 'technology'?(
             <Technology/>
         ):''}
+        <footer>
+            <Attribution>
+                <AttributionA>
+                    <p>Challenge by<a href="https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub" rel="noreferrer" target="_blank">&nbsp;Frontend Mentor | Space tourism multipage.</a></p>
+                </AttributionA>
+                <AttributionA>
+                    <p>&nbsp;&nbsp;Coded by <a href="https://www.linkedin.com/in/rikiwendri/">&nbsp;Riki Wendri</a></p>
+                </AttributionA>
+            </Attribution>
+        </footer>
     </Styledspacetourism>
   )
 }

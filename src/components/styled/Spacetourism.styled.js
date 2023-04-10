@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgscreen from '../assets/home/background-home-mobile.jpg';
 
 export const Styledspacetourism = styled.div`
     //Color:
@@ -20,6 +21,10 @@ export const Styledspacetourism = styled.div`
     span{
         opacity:.25;
     }
+    footer{
+        background: url(${bgscreen});
+        background-color:var(--Dark-space);
+    }
 `
 export const Vstack = styled.div`
     display:flex;
@@ -28,5 +33,24 @@ export const Vstack = styled.div`
 export const Hstack = styled.div`
     display:flex;
     flex-direction: row;
+`
+//Styled for attribution:
+export const Attribution = styled.div`
+    height:auto;
+    display: flex;
+    color: var(--Light-green-space);
+    margin: 20px auto 10px;
+    text-align: center;
+    justify-content: center;
+    @media screen and (max-width:600px){
+        flex-direction: column;
+        margin: 10px auto 10px;
+    }
+`
+export const AttributionA = styled(Attribution)`
+    margin:0;
+    p{
+        font-size: .7rem;
+    }
 `
 
