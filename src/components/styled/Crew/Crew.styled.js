@@ -217,10 +217,18 @@ export const Crewdesc = styled(Vstack)`
             margin:20px 0 0;
         }
         h4{
-            margin:130% 0 0;
+            margin:138% 0 0;
         }
         p{
-            margin:25px 5% 20%;
+            margin:25px 5% 22%;
+        }
+    }
+    @media screen and (max-height:386px){
+        h4{
+            margin:580px 0 0;
+        }
+        p{
+            margin:2% 18%;
         }
     }
     @media screen and (max-height:376px){
@@ -299,7 +307,7 @@ export const Hslidespreader = styled(Hstack)`
         margin:0 42%;
     }
     @media screen and (max-height:386px) {
-        top:66%;
+        top:68%;
     }
     @media screen and (max-height:376px) {
         top:545px;
