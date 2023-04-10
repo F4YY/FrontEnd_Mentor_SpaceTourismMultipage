@@ -164,6 +164,11 @@ export const Techdesc = styled(Vstack)`
             margin:0 5% 20%;
         }
     }
+    @media screen and (max-width:386px) {
+        p{
+            margin:0 5% 0;
+        }
+    }
     @media screen and (max-height:601px){
         text-align:center;
         h3{
