@@ -98,9 +98,6 @@ export const Navbar = () => {
                 </Roundexplore>
                 </Styledhome>
             ):null}
-        {/* {clickNav.activePage === 'home'?(
-            <Home/>
-        ):''} */}
         {(clickNav.activePage === 'destination') && toExplore?(
             <Destination/>
         ):''}
