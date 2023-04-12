@@ -41,6 +41,10 @@ export const Destidesc = styled(Vstack)`
         color: var(--White);
         text-transform: uppercase;
         margin:135px 274.5px 0 157.5px;
+        //for animation:
+        animation: expand 1s ease-in-out;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
     h5{
         font-size: 28px;
@@ -59,6 +63,10 @@ export const Destidesc = styled(Vstack)`
         line-height: 32px;
         color: var(--Light-green-space);
         margin:14px 164px 0 157px;
+        //for animation:
+        animation: slidefromleft .5s ease-out;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
     .description{
         padding-bottom: 54px;
@@ -150,6 +158,8 @@ export const Styledimage = styled.img`
     border-radius: 50%;
     margin:97px auto auto 230px;
     box-shadow: 30px 30px 100px 50px hsl(231, 77%, 90%,.03);
+    //for animation:
+    animation: rotation 80s infinite linear;
     @media screen and (max-width:1181px){
         margin:97px 50px 0 150px;
     }

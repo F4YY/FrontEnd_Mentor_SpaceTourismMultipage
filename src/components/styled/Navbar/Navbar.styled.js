@@ -200,7 +200,7 @@ export const Roundexplore = styled.button.attrs({
     justify-content: center;
     align-items: center;
     cursor:pointer;
-    margin: 1080px 175px 0 386px;
+    margin: 495px 125px auto auto;
     font-family: var(--Bellefair-font);
     font-style: normal;
     font-weight: 400;
@@ -233,58 +233,34 @@ export const Roundexplore = styled.button.attrs({
             transform: scale(1.5);
         }
     }
-    @media screen and (max-width:1025px) {
-        width: 270px;
-        height: 270px;
-        margin:740% 0 0 110%;
+    //for tablet screen:
+    @media screen and
+        (max-width:1025px),
+        (max-width:821px),
+        (max-width:769px)
+    {
+        margin: 40px auto 10%;
     }
-    @media screen and (max-width:913px) {
-        margin:740% 0 0 90%;
-    }
-    @media screen and (max-width:821px) {
-        margin:650% 0 0 70%;
-    }
-    @media screen and (max-width:769px) {
-        margin:550% 0 0 62%;
-    }
-    @media screen and (max-width:1025px) and (max-height:769px) {
-        margin:400% 0 0 110%;
-    }
-    @media screen and (max-width:721px) {
-        margin:555% 0 0 55%;
-    }
-    /* @media screen and (max-height:721px) {
-        margin:450% 0 0 0;
-    } */
-    @media screen and (max-height:601px) {
-        margin:450% 0 0 110%;
-    }
-    @media screen and (max-width:600px) {
+    //for mobile screen:
+    @media screen and
+        (max-width:600px),
+        (max-height:601px),
+        (max-height:541px),
+        (max-height:415px),
+        (max-height:394px),
+        (max-width:386px),
+        (max-height:386px),
+        (max-width:376px),
+        (max-height:361px),
+        (max-height:281px)
+    {
         font-size: 20px;
         line-height: 23px;
         text-align: center;
         letter-spacing: 1.25px;
         width: 160px;
         height: 160px;
-        margin:650% auto auto;
-    }
-    @media screen and (max-height:541px) {
-        margin:380% 0 0 50%;
-    }
-    @media screen and (max-height:415px) {
-        margin:400% 0 0 85%;
-    }
-    @media screen and (max-height:394px) {
-        margin:430% 0 0 75%;
-    }
-    @media screen and (max-height:376px) {
-        margin:400% 0 0 65%;
-    }
-    @media screen and (max-height:361px) {
-        margin:380% 0 0 50%;
-    }
-    @media screen and (max-height:281px) {
-        margin:380% 0 0 40%;
+        margin:40px auto 10%;
     }
 `
 //Styled for mobile menu icon:
@@ -318,6 +294,10 @@ export const Menulist = styled(Vstack)`
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
     padding:118px 0 0;
+    //for animation:
+    animation: opensidenavmobile .3s ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
 `
 export const Mobilestack = styled(Vstack)`
     font-size: 18px;
@@ -333,6 +313,6 @@ export const Closeicon = styled.img`
     height: auto;
     cursor: pointer;
     position: absolute;
-    top:5.5%;
+    top:5%;
     right:10%;
 `

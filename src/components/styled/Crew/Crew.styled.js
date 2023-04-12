@@ -38,6 +38,10 @@ export const Crewdesc = styled(Vstack)`
         text-transform: uppercase;
         color: var(--White);
         margin: 15px 0 0 165.5px;
+        //for animation:
+        animation: topdown .8s ease-in-out;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
     h4{
         font-family: var(--Bellefair-font);
@@ -69,6 +73,10 @@ export const Crewdesc = styled(Vstack)`
         height: 128px;
         color: var(--Light-green-space);
         margin:27px 0 0 165px;
+        //for animation:
+        animation: slidefromright .5s ease-out;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
     .activecrew{
         background-color: var(--White);
@@ -128,7 +136,11 @@ export const Crewdesc = styled(Vstack)`
         }
     }
     //for mobile screen:
-    @media screen and (max-width:600px) {
+    @media screen and
+        (max-width:600px),
+        (max-width:386px),
+        (max-width:281px)
+    {
         text-align: center;
         h3{
             font-size: 2.25em;
@@ -138,7 +150,7 @@ export const Crewdesc = styled(Vstack)`
         h4{
             font-size: 1.6em;
             line-height: 18px;
-            margin:125% 0 0;
+            margin:530px 0 0;
             opacity:.5;
         }
         h5{
@@ -151,20 +163,25 @@ export const Crewdesc = styled(Vstack)`
             font-size: 1.25em;
             width: auto;
             line-height: 1.65em;
-            margin:25px 5% 124px;
+            margin:25px 5% 20%;
         }
     }
-    @media screen and (max-height:601px){
-        text-align:center;
+    @media screen and
+        (max-height:601px),
+        (max-height:415px),
+        (max-height:386px),
+        (max-height:376px),
+    {
+        text-align: center;
         h3{
-            font-size: 3em;
+            font-size: 2.25em;
             line-height: 28px;
-            margin:40px 0 0;
+            margin:20px 0 0;
         }
         h4{
             font-size: 1.6em;
             line-height: 18px;
-            margin:550px 0 0;
+            margin:530px 0 0;
             opacity:.5;
         }
         h5{
@@ -174,114 +191,10 @@ export const Crewdesc = styled(Vstack)`
             margin:20% auto 0;
         }
         p{
-            width: auto;
-            text-align: center;
-            margin:20px 15% 8%;
-        }
-        .description{
-            padding-bottom: 7%;
-            border-bottom: 1px solid #383B4B;
-        }
-    }
-    @media screen and (max-height:415px){
-        text-align:center;
-        h3{
-            font-size: 2.7em;
-            line-height: 28px;
-            margin:20px 0 0;
-        }
-        h4{
-            font-size: 1.5em;
-            line-height: 18px;
-            margin:520px 0 0;
-            opacity:.5;
-        }
-        h5{
-            font-size: 1.5em;
-            line-height: 19px;
-            letter-spacing: 2.7px;
-            margin:20% auto 0;
-        }
-        p{
-            font-size: 1.3em;
-            margin:2% 15%;
-        }
-        .description{
-            padding-bottom: 7%;
-            border-bottom: 1px solid #383B4B;
-        }
-    }
-    @media screen and (max-width:386px) {
-        text-align: center;
-        h3{
-            margin:20px 0 0;
-        }
-        h4{
-            margin:138% 0 0;
-        }
-        p{
-            margin:25px 5% 22%;
-        }
-    }
-    @media screen and (max-height:386px){
-        h4{
-            margin:580px 0 0;
-        }
-        p{
-            margin:2% 18%;
-        }
-    }
-    @media screen and (max-height:376px){
-        text-align:center;
-        h3{
-            font-size: 2.7em;
-            line-height: 28px;
-            margin:20px 0 0;
-        }
-        h4{
-            font-size: 1.5em;
-            line-height: 18px;
-            margin:420px 0 0;
-            opacity:.5;
-        }
-        h5{
-            font-size: 1.5em;
-            line-height: 19px;
-            letter-spacing: 2.7px;
-            margin:20% auto 0;
-        }
-        p{
-            margin:20px 10%;
-        }
-        .description{
-            padding-bottom: 7%;
-            border-bottom: 1px solid #383B4B;
-        }
-    }
-    @media screen and (max-width:281px) {
-        text-align: center;
-        h3{
-            font-size: 2em;
-            line-height: 28px;
-            margin:20px 0 0;
-        }
-        h4{
-            font-size: 1.3em;
-            line-height: 18px;
-            margin:118% 0 0;
-            opacity:.5;
-        }
-        h5{
-            font-size: 1.2em;
-            line-height: 19px;
-            letter-spacing: 2.7px;
-            margin:35% auto 0;
-        }
-        p{
-            font-size: 1em;
+            font-size: 1.25em;
             width: auto;
             line-height: 1.65em;
-            margin:25px 5% 20%;
+            margin:25px 5% 0;
         }
     }
 `
@@ -292,30 +205,30 @@ export const Hslidespreader = styled(Hstack)`
         margin:0 auto 87%;
     }
     //for mobile screen:
-    @media screen and (max-width:600px) {
+    @media screen and
+        (max-width:600px),
+        (max-width:386px),
+        (max-width:281px)
+    {
         position: absolute;
         top:59%;
         margin:0 35%;
     }
-    @media screen and (max-height:601px) {
+    @media screen and
+        (max-height:601px),
+        (max-height:386px),
+    {
         position: absolute;
-        top:720px;
-        margin:0 45%;
+        top:65%;
+        margin:0 43%;
     }
     @media screen and (max-height:415px) {
-        top:72%;
+        top:67%;
         margin:0 42%;
     }
-    @media screen and (max-height:386px) {
-        top:68%;
-    }
     @media screen and (max-height:376px) {
-        top:545px;
-        margin:0 41%;
-    }
-    @media screen and (max-width:281px) {
-        top:58%;
-        margin:0 32%;
+        top:64%;
+        margin:0 40%;
     }
 `
 export const Hcirlceslider = styled.button`
@@ -341,6 +254,8 @@ export const Crewpic = styled.img`
     bottom:0;
     width:auto;
     height:auto;
+    //for animation:
+    animation: appearing .6s linear;
     //for tablet screen:
     @media screen and (max-width:1181px), (max-width:1115px) {
         right:2%;

@@ -52,6 +52,8 @@ export const Techdesc = styled(Vstack)`
         text-transform: uppercase;
         color: var(--White);
         margin: 11px 0 0 80px;
+        //for animation:
+        animation: slidefromleft .6s linear;
     }
     h5{
         font-size: 28px;
@@ -82,6 +84,8 @@ export const Techdesc = styled(Vstack)`
         line-height: 32px;
         color: var(--Light-green-space);
         margin:17px 0 214px 80px;
+        //for animation:
+        animation: appearing .6s linear;
     }
     .activetech{
         background-color: var(--White);
@@ -141,7 +145,11 @@ export const Techdesc = styled(Vstack)`
         }
     }
     //for mobile screen:
-    @media screen and (max-width:600px) {
+    @media screen and
+        (max-width:600px),
+        (max-width:386px),
+        (max-width:281px)
+    {
         text-align: center;
         h3{
             font-size: 2.4em;
@@ -161,20 +169,19 @@ export const Techdesc = styled(Vstack)`
             font-size: 1em;
             width:auto;
             height:auto;
-            margin:0 5% 20%;
+            margin:0 5% 10%;
         }
     }
-    @media screen and (max-width:386px) {
-        p{
-            margin:0 5% 0;
-        }
-    }
-    @media screen and (max-height:601px){
-        text-align:center;
+    @media screen and
+        (max-height:601px),
+        (max-height:415px),
+        (max-height:386px),
+        (max-height:376px),
+    {
+        text-align: center;
         h3{
-            font-size: 3em;
-            line-height: 28px;
-            margin:40px 0 0;
+            font-size: 2.4em;
+            margin:0;
         }
         h5{
             font-size: 1.5em;
@@ -187,43 +194,10 @@ export const Techdesc = styled(Vstack)`
             margin:3% 0;
         }
         p{
-            width: auto;
-            margin:20px 15% 0;
-        }
-    }
-    @media screen and (max-height:415px){
-        h3{
-            margin:20px 0 0;
-        }
-        h5{
-            margin:20% auto 0;
-        }
-        h6{
-            margin: 3% 0;
-        }
-        p{
-            font-size: 1.2em;
-            margin:20px 15% 2%;
-        }
-    }
-    @media screen and (max-width:281px) {
-        text-align: center;
-        h3{
-            font-size: 2em;
-            line-height: 28px;
-            margin:20px 0 0;
-        }
-        h5{
-            font-size: 1.2em;
-            line-height: 19px;
-            letter-spacing: 2.7px;
-            margin:35% auto 0;
-        }
-        p{
             font-size: 1em;
-            width: auto;
-            line-height: 1.65em;
-            margin:25px 5% 20%;
+            width:auto;
+            height:auto;
+            margin:0 5% 10%;
         }
     }
 `
@@ -303,6 +277,10 @@ export const Techpic = styled.img`
     top:272px;
     width: 515px;
     height: 527px;
+    //for animation:
+    animation: topdown .5s ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
     //for tablet screen:
     @media screen and (max-width:1025px), (max-width:913px), (max-width:821px), (max-width:769px) {
         display: none;

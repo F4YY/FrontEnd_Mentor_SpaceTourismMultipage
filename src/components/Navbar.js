@@ -7,6 +7,7 @@ import { Attribution, AttributionA, Hstack, Styledspacetourism, Vstack } from '.
 import { Technology } from './Technology';
 import menuicon from './assets/shared/icon-hamburger.svg';
 import closeicon from './assets/shared/icon-close.svg';
+import { Styledhome } from './styled/Home/Home.styled';
 
 export const Navbar = () => {
     const [clickNav, setClicknav] = React.useState({
@@ -53,14 +54,14 @@ export const Navbar = () => {
                     </Hstack>
                 )}
                 </BGnavbarselect>
-                {!toExplore || clickNav.activePage === 'home'?(
+                {/* {!toExplore || clickNav.activePage === 'home'?(
                     <Roundexplore onClick={() => {
                         exploreHandle();
                         toggleActive(1);
                     }}>
                         Explore
                     </Roundexplore>
-                ):null}
+                ):null} */}
             </Vstack>
             <Menuicon src={menuicon} alt='menuicon' onClick={()=>setToggleMenu(true)} />
                 {toggleMenu && (
@@ -86,9 +87,20 @@ export const Navbar = () => {
                     </>
                 )}
         </Stylednavbar>
-        {clickNav.activePage === 'home'?(
+        {!toExplore || clickNav.activePage === 'home'?(
+            <Styledhome>
+                <Home/>
+                <Roundexplore onClick={() => {
+                    exploreHandle();
+                    toggleActive(1);
+                }}>
+                    Explore
+                </Roundexplore>
+                </Styledhome>
+            ):null}
+        {/* {clickNav.activePage === 'home'?(
             <Home/>
-        ):''}
+        ):''} */}
         {(clickNav.activePage === 'destination') && toExplore?(
             <Destination/>
         ):''}

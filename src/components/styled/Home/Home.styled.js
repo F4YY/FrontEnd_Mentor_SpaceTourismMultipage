@@ -13,6 +13,7 @@ export const Hstack = styled.div`
 `
 //Styled for Home:
 export const Styledhome = styled.div`
+    display:flex;
     background-image: url(${bghomedesktop});
     background-color: var(--Dark-space);
     background-repeat: no-repeat;
@@ -23,6 +24,7 @@ export const Styledhome = styled.div`
     @media screen and (max-width:1025px) {
         background-image: url(${bghometablet});
         background-size: contain;
+        flex-direction:column;
     }
     @media screen and (max-width:913px) {
         background-image: url(${bghometablet});
@@ -107,25 +109,6 @@ export const Herodesc = styled(Vstack)`
             margin:2% 20%;
         }
     }
-    /* @media screen and (max-height:721px) {
-        text-align:center;
-        h1{
-            font-size: 10em;
-            line-height: 100px;
-            margin:4% auto 0;
-        }
-        h5{
-            font-size: 1.4em;
-            line-height: 19px;
-            margin:17% auto 0;
-        }
-        p{
-            font-size: 1.1em;
-            line-height: 2.2em;
-            width: auto;
-            margin:2% 20% 40%;
-        }
-    } */
     @media screen and (max-width:600px) {
         h1{
             font-size: 80px;
@@ -163,7 +146,7 @@ export const Herodesc = styled(Vstack)`
             font-size: 1.3em;
             line-height: 2.2em;
             width: auto;
-            margin:2% 15% 55%;
+            margin:2% 15% 0;
         }
     }
     @media screen and (max-height:541px) {
@@ -182,7 +165,7 @@ export const Herodesc = styled(Vstack)`
             font-size: 1.1em;
             line-height: 2.2em;
             width: auto;
-            margin:2% 15% 55%;
+            margin:2% 15% 0;
         }
     }
 `
