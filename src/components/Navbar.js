@@ -27,6 +27,15 @@ export const Navbar = () => {
         }
     }
 
+    function toggleActiveMobileStyles(index){
+        if(clickNav.allPages[index] === clickNav.activePage) {
+            return 'activemobile';
+        }
+        else{
+            return 'inactivemobile'
+        }
+    }
+
     const [toExplore, setToexplore] = React.useState(false);
     const exploreHandle = () => {
         setToexplore(true);
@@ -54,14 +63,6 @@ export const Navbar = () => {
                     </Hstack>
                 )}
                 </BGnavbarselect>
-                {/* {!toExplore || clickNav.activePage === 'home'?(
-                    <Roundexplore onClick={() => {
-                        exploreHandle();
-                        toggleActive(1);
-                    }}>
-                        Explore
-                    </Roundexplore>
-                ):null} */}
             </Vstack>
             <Menuicon src={menuicon} alt='menuicon' onClick={()=>setToggleMenu(true)} />
                 {toggleMenu && (
@@ -71,7 +72,7 @@ export const Navbar = () => {
                         <Closeicon src={closeicon} alt='closeicon' onClick={()=>setToggleMenu(false)} />
                         {clickNav.allPages.map((page,index)=>
                             <Mobilestack>
-                                <p className={toggleActiveStyles(index)}
+                                <p className={toggleActiveMobileStyles(index)}
                                     key={index}
                                     onClick={()=>{
                                         toggleActive(index);

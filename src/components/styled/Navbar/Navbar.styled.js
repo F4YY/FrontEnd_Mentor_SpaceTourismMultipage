@@ -105,24 +105,18 @@ export const BGnavbarselect = styled.div`
             }
         }
     }
-    #destination{
-        p:nth-child(2){
-            color: red;
+    .active{
+        ::after{
+            content:"";
+            margin-top: 55px;
+            height: 3px;
+            width: 100%;
+            background-color: var(--White);
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     }
-    .active{
-            ::after{
-                content:"";
-                color:black;
-                margin-top: 55px;
-                height: 3px;
-                width: 100%;
-                background-color: var(--White);
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
     .inactive{
         ::after{
             content:"";
@@ -307,12 +301,34 @@ export const Mobilestack = styled(Vstack)`
     text-transform: uppercase;
     color:var(--White);
     margin: 16px 0 0 32px;
+    p{
+        position:relative;
+    }
+    .activemobile{
+        ::after{
+            content:"";
+            padding-left:32px;
+            height: 5px;
+            width: 10%;
+            transform:rotate(90deg);
+            background-color: var(--White);
+            position: absolute;
+            left: -57px;
+            top: 10px;
+        }
+    }
+    .inactivemobile{
+        ::after{
+            content:"";
+            background-color: none;
+        }
+    }
 `
 export const Closeicon = styled.img`
     width: 10%;
     height: auto;
     cursor: pointer;
     position: absolute;
-    top:5%;
+    top:4.3%;
     right:10%;
 `

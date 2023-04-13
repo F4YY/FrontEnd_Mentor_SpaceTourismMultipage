@@ -328,19 +328,19 @@ export const AverageDistance = styled(Hstackflexi)`
     }
     @media screen and (max-width:600px){
         gap:6%;
-        align-items: flex-start;
-        margin:8% 0 10%;
+        align-items: center;
+        flex-direction:column;
+        margin:8% auto 10%;
         h6{
             font-size: 1.9em;
-            text-align: center;
-            margin:12px auto 3%;
+            margin:12px auto 20%;
         }
         p{
             font-size: 1em;
             margin:0;
         }
         .h6_destitravel{
-            margin:12px auto 15%;
+            margin:12px 0 0;
         }
     }
     @media screen and (max-height:601px){

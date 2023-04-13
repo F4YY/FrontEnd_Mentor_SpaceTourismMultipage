@@ -166,7 +166,7 @@ export const Techdesc = styled(Vstack)`
             margin:3% 0;
         }
         p{
-            font-size: 1em;
+            font-size: 1.1em;
             width:auto;
             height:auto;
             margin:0 5% 10%;
