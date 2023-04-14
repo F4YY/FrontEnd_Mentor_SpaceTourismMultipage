@@ -134,7 +134,7 @@ export const Destidesc = styled(Vstack)`
         h2{
             font-size: 500%;
             text-align: center;
-            margin:17% auto 0;
+            margin:15% auto 0;
         }
         h5{
             font-size: 1.5em;
@@ -172,6 +172,8 @@ export const Styledimage = styled.img`
         margin:3% auto 0;
     }
     @media screen and (max-height:601px){
+        width:45%;
+        height:auto;
         margin:3% auto 0;
     }
 `
@@ -272,13 +274,16 @@ export const Destibarselect = styled(Hstack)`
         margin:55% auto -55%;
     }
     @media screen and (max-height:415px){
-        margin:69% auto -69%;
+        margin:59% auto -59%;
+    }
+    @media screen and (max-height:385px){
+        margin:59% auto -59%;
     }
     @media screen and (max-height:376px){
-        margin:75% auto -75%;
+        margin:57% auto -57%;
     }
     @media screen and (max-height:281px){
-        margin:80% auto -80%;
+        margin:60% auto -60%;
     }
 `
 export const AverageDistance = styled(Hstackflexi)`

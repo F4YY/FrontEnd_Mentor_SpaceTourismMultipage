@@ -28,6 +28,7 @@ export const Destination = () => {
             return 'inactive'
         }
     }
+
   return (
     <Styleddesti>
         <Destidesc>

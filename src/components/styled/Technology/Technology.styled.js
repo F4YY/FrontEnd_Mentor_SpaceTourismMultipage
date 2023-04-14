@@ -176,7 +176,7 @@ export const Techdesc = styled(Vstack)`
         (max-height:601px),
         (max-height:415px),
         (max-height:386px),
-        (max-height:376px),
+        (max-height:376px)
     {
         text-align: center;
         h3{
@@ -194,7 +194,7 @@ export const Techdesc = styled(Vstack)`
             margin:3% 0;
         }
         p{
-            font-size: 1em;
+            font-size: 1.1em;
             width:auto;
             height:auto;
             margin:0 5% 10%;

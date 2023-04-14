@@ -170,7 +170,7 @@ export const Crewdesc = styled(Vstack)`
         (max-height:601px),
         (max-height:415px),
         (max-height:386px),
-        (max-height:376px),
+        (max-height:376px)
     {
         text-align: center;
         h3{
@@ -216,7 +216,7 @@ export const Hslidespreader = styled(Hstack)`
     }
     @media screen and
         (max-height:601px),
-        (max-height:386px),
+        (max-height:386px)
     {
         position: absolute;
         top:65%;
