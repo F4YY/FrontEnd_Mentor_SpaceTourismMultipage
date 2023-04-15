@@ -23,20 +23,6 @@ export const Technology = () => {
   }
 
   const swipeviews = useSwipeable({
-    onSwipedUp: () => {
-      if (selectTech.activeTech === selectTech.allTech[0]) {
-        setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
-      } else {
-        setSelecttech({...selectTech, activeTech:selectTech.allTech[2]})
-      }
-    },
-    onSwipedDown: () => {
-      if (selectTech.activeTech === selectTech.allTech[2]) {
-          setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
-      } else {
-          setSelecttech({...selectTech, activeTech:selectTech.allTech[0]})
-      }
-    },
     onSwipedLeft: () => {
       if (selectTech.activeTech === selectTech.allTech[0]) {
           setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
