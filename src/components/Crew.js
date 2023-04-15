@@ -1,6 +1,7 @@
 import React from 'react';
 import { Crewdesc, Crewpic, Hcirlceslider, Hslidespreader, Styledcrew } from './styled/Crew/Crew.styled';
 import Datas from '../data.json';
+import { useSwipeable } from 'react-swipeable';
 
 export const Crew = () => {
   const [selectCrew, setselectCrew] = React.useState({
@@ -19,9 +20,31 @@ export const Crew = () => {
           return 'inactivecrew'
       }
   }
+
+  const swipeviews = useSwipeable({
+    onSwipedLeft: () => {
+        if (selectCrew.activeCrew === selectCrew.allCrews[0]) {
+            setselectCrew({...selectCrew, activeCrew:selectCrew.allCrews[1]})
+        } else if (selectCrew.activeCrew === selectCrew.allCrews[1]){
+            setselectCrew({...selectCrew, activeCrew:selectCrew.allCrews[2]})
+        } else {
+            setselectCrew({...selectCrew, activeCrew:selectCrew.allCrews[3]})
+        }
+    },
+    onSwipedRight: () => {
+        if (selectCrew.activeCrew === selectCrew.allCrews[3]) {
+            setselectCrew({...selectCrew, activeCrew:selectCrew.allCrews[2]})
+        } else if (selectCrew.activeCrew === selectCrew.allCrews[2]){
+            setselectCrew({...selectCrew, activeCrew:selectCrew.allCrews[1]})
+        } else {
+            setselectCrew({...selectCrew, activeCrew:selectCrew.allCrews[0]})
+        }
+    }
+})
+
   return (
     <Styledcrew>
-      <Crewdesc>
+      <Crewdesc {...swipeviews}>
         <h5>
           <span>02</span><b>&nbsp;&nbsp;Meet your crew</b>
         </h5>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Vstack } from './styled/Crew/Crew.styled';
 import { Hstackflexi, Styledtech, Techdesc, Techpic, Techpicmobile, Vcirlceslider, Vslidespreader } from './styled/Technology/Technology.styled';
 import Datas from '../data.json';
+import { useSwipeable } from 'react-swipeable';
 
 export const Technology = () => {
   const [selectTech, setSelecttech] = React.useState({
@@ -20,13 +21,45 @@ export const Technology = () => {
           return 'inactivetech'
       }
   }
+
+  const swipeviews = useSwipeable({
+    onSwipedUp: () => {
+      if (selectTech.activeTech === selectTech.allTech[0]) {
+        setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
+      } else {
+        setSelecttech({...selectTech, activeTech:selectTech.allTech[2]})
+      }
+    },
+    onSwipedDown: () => {
+      if (selectTech.activeTech === selectTech.allTech[2]) {
+          setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
+      } else {
+          setSelecttech({...selectTech, activeTech:selectTech.allTech[0]})
+      }
+    },
+    onSwipedLeft: () => {
+      if (selectTech.activeTech === selectTech.allTech[0]) {
+          setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
+      } else {
+          setSelecttech({...selectTech, activeTech:selectTech.allTech[2]})
+      }
+    },
+    onSwipedRight: () => {
+      if (selectTech.activeTech === selectTech.allTech[2]) {
+          setSelecttech({...selectTech, activeTech:selectTech.allTech[1]})
+      } else {
+          setSelecttech({...selectTech, activeTech:selectTech.allTech[0]})
+      }
+    }
+})
+
   return (
     <Styledtech>
       <Techdesc>
         <h5>
           <span>03</span>&nbsp;&nbsp;<b>Space launch 101</b>
         </h5>
-        <Hstackflexi>
+        <Hstackflexi {...swipeviews}>
           <Vstack>
             <Vslidespreader>
             {selectTech.allTech.map((selection,index)=>

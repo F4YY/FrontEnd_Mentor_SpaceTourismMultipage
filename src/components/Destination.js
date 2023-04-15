@@ -10,6 +10,7 @@ import {
     Vstack
 } from './styled/Destination/Desti.styled';
 import Datas from '../data.json';
+import { useSwipeable } from 'react-swipeable';
 
 export const Destination = () => {
     const [selectDesti, setSelectdesti] = React.useState({
@@ -29,6 +30,26 @@ export const Destination = () => {
         }
     }
 
+    const swipeviews = useSwipeable({
+        onSwipedLeft: () => {
+            if (selectDesti.activeSelection === selectDesti.allSelections[0]) {
+                setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[1]})
+            } else if (selectDesti.activeSelection === selectDesti.allSelections[1]){
+                setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[2]})
+            } else {
+                setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[3]})
+            }
+        },
+        onSwipedRight: () => {
+            if (selectDesti.activeSelection === selectDesti.allSelections[3]) {
+                setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[2]})
+            } else if (selectDesti.activeSelection === selectDesti.allSelections[2]){
+                setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[1]})
+            } else {
+                setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[0]})
+            }
+        }
+    })
   return (
     <Styleddesti>
         <Destidesc>
@@ -49,7 +70,7 @@ export const Destination = () => {
                     </Hstack>
                 )}
             </Destibarselect>
-            <Hstackflexi>
+            <Hstackflexi {...swipeviews}>
                 {selectDesti.activeSelection === 'moon'?(
                     <>
                         <Styledimage

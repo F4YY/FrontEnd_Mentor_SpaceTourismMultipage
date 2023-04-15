@@ -166,7 +166,7 @@ export const Techdesc = styled(Vstack)`
             margin:3% 0;
         }
         p{
-            font-size: 1.1em;
+            font-size: 1.2em;
             width:auto;
             height:auto;
             margin:0 5% 10%;
@@ -194,7 +194,7 @@ export const Techdesc = styled(Vstack)`
             margin:3% 0;
         }
         p{
-            font-size: 1.1em;
+            font-size: 1.2em;
             width:auto;
             height:auto;
             margin:0 5% 10%;
@@ -264,7 +264,7 @@ export const Vcirlceslider = styled.button`
     @media screen and (max-height:601px) {
         width: 60px;
         height: 60px;
-        font-size: 16px;
+        font-size: 1.5em;
         line-height: 18px;
         letter-spacing: 1px;
         margin:0 16px 32px 0;
