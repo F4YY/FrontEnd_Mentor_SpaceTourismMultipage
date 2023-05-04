@@ -65,7 +65,7 @@ export const Technology = () => {
             <h6>
               The terminology...
             </h6>
-            {selectTech.activeTech === 1 ?(
+            {selectTech.activeTech === 1 && (
             <>
               <h3>
                   {Datas.technology[0].name}
@@ -79,9 +79,9 @@ export const Technology = () => {
               <Techpicmobile
                 src={require(`./assets/technology/image-launch-vehicle-landscape.jpg`)} alt='vechicle-landscape'
               />
-            </>):''
-            }
-            {selectTech.activeTech === 2 ?(
+            </>
+            )}
+            {selectTech.activeTech === 2 && (
             <>
               <h3>
                   {Datas.technology[1].name}
@@ -95,9 +95,9 @@ export const Technology = () => {
               <Techpicmobile
                 src={require(`./assets/technology/image-spaceport-landscape.jpg`)} alt='spaceport-landscape'
               />
-            </>):''
-            }
-            {selectTech.activeTech === 3 ?(
+            </>
+            )}
+            {selectTech.activeTech === 3 && (
             <>
               <h3>
                   {Datas.technology[2].name}
@@ -111,8 +111,8 @@ export const Technology = () => {
               <Techpicmobile
                 src={require(`./assets/technology/image-space-capsule-landscape.jpg`)} alt='capsule-landscape'
               />
-            </>):''
-            }
+            </>
+            )}
           </Vstack>
         </Hstackflexi>
       </Techdesc>

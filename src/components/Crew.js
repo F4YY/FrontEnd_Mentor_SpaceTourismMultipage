@@ -48,7 +48,7 @@ export const Crew = () => {
         <h5>
           <span>02</span><b>&nbsp;&nbsp;Meet your crew</b>
         </h5>
-        {selectCrew.activeCrew === 'douglas'?(
+        {selectCrew.activeCrew === 'douglas' && (
           <>
             <h4>
               {Datas.crew[0].role}
@@ -62,10 +62,9 @@ export const Crew = () => {
             <Crewpic
               src={require(`./assets/crew/image-douglas-hurley.png`)} alt='douglas'
             />
-          </>)
-          :''
-        }
-        {selectCrew.activeCrew === 'mark'?(
+          </>
+        )}
+        {selectCrew.activeCrew === 'mark' && (
           <>
             <h4>
               {Datas.crew[1].role}
@@ -79,10 +78,9 @@ export const Crew = () => {
             <Crewpic
               src={require(`./assets/crew/image-mark-shuttleworth.png`)} alt='mark'
             />
-          </>)
-          :''
-        }
-        {selectCrew.activeCrew === 'victor'?(
+          </>
+        )}
+        {selectCrew.activeCrew === 'victor' && (
           <>
             <h4>
               {Datas.crew[2].role}
@@ -96,10 +94,9 @@ export const Crew = () => {
             <Crewpic
               src={require(`./assets/crew/image-victor-glover.png`)} alt='victor'
             />
-          </>)
-          :''
-        }
-        {selectCrew.activeCrew === 'anou'?(
+          </>
+        )}
+        {selectCrew.activeCrew === 'anou' && (
           <>
             <h4>
               {Datas.crew[3].role}
@@ -113,9 +110,8 @@ export const Crew = () => {
             <Crewpic
               src={require(`./assets/crew/image-anousheh-ansari.png`)} alt='anou'
             />
-          </>)
-          :''
-        }
+          </>
+        )}
         <Hslidespreader>
         {selectCrew.allCrews.map((selection,index)=>
           <Hcirlceslider className={toggleActiveStyles(index)}

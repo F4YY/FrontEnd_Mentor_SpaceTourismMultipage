@@ -71,7 +71,7 @@ export const Destination = () => {
                 )}
             </Destibarselect>
             <Hstackflexi {...swipeviews}>
-                {selectDesti.activeSelection === 'moon'?(
+                {selectDesti.activeSelection === 'moon' && (
                     <>
                         <Styledimage
                             src={require(`./assets/destination/image-moon.png`)} alt='moon'
@@ -102,10 +102,9 @@ export const Destination = () => {
                                 </Vstack>
                             </AverageDistance>
                         </Vstack>
-                    </>)
-                    : ''
-                }
-                {selectDesti.activeSelection === 'mars'?(
+                    </>
+                )}
+                {selectDesti.activeSelection === 'mars' && (
                     <>
                         <Styledimage
                             src={require(`./assets/destination/image-mars.png`)} alt='mars'
@@ -137,9 +136,8 @@ export const Destination = () => {
                             </AverageDistance>
                         </Vstack>
                     </>
-                    ) : ''
-                }
-                {selectDesti.activeSelection === 'europa'?(
+                )}
+                {selectDesti.activeSelection === 'europa' && (
                     <>
                         <Styledimage
                             src={require(`./assets/destination/image-europa.png`)} alt='europa'
@@ -171,9 +169,8 @@ export const Destination = () => {
                             </AverageDistance>
                         </Vstack>
                     </>
-                    ) : ''
-                }
-                {selectDesti.activeSelection === 'titan'?(
+                )}
+                {selectDesti.activeSelection === 'titan' && (
                     <>
                         <Styledimage
                             src={require(`./assets/destination/image-titan.png`)} alt='titan'
@@ -205,8 +202,7 @@ export const Destination = () => {
                             </AverageDistance>
                         </Vstack>
                     </>
-                    ) : ''
-                }
+                )}
             </Hstackflexi>
         </Destidesc>
     </Styleddesti>
