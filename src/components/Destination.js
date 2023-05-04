@@ -17,8 +17,24 @@ export const Destination = () => {
         activeSelection:'moon',
         allSelections:['moon','mars','europa','titan'],
     });
+    const [description, setDescription] = React.useState({
+        activeDescription: Datas.destinations[0].description,
+        allDescriptions: [Datas.destinations[0].description, Datas.destinations[1].description, Datas.destinations[2].description, Datas.destinations[3].description]
+    });
+    const [distance, setDistance] = React.useState({
+        activeDistance: Datas.destinations[0].distance,
+        allDistances: [Datas.destinations[0].distance, Datas.destinations[1].distance, Datas.destinations[2].distance, Datas.destinations[3].distance]
+    });
+    const [travelTime, setTravelTime] = React.useState({
+        activeTravelTime: Datas.destinations[0].travel,
+        allTravelTimes: [Datas.destinations[0].travel, Datas.destinations[1].travel, Datas.destinations[2].travel, Datas.destinations[3].travel]
+    });
+
     const toggleActive = (index) => {
         setSelectdesti({...selectDesti, activeSelection:selectDesti.allSelections[index]})
+        setDescription({...description, activeDescription:description.allDescriptions[index]})
+        setDistance({...distance, activeDistance:distance.allDistances[index]})
+        setTravelTime({...travelTime, activeTravelTime:travelTime.allTravelTimes[index]})
     }
 
     function toggleActiveStyles(index){
@@ -71,17 +87,17 @@ export const Destination = () => {
                 )}
             </Destibarselect>
             <Hstackflexi {...swipeviews}>
-                {selectDesti.activeSelection === 'moon' && (
+                {selectDesti.activeSelection && (
                     <>
                         <Styledimage
-                            src={require(`./assets/destination/image-moon.png`)} alt='moon'
+                            src={require(`./assets/destination/image-${selectDesti.activeSelection}.png`)} alt={selectDesti.activeSelection}
                         />
                         <Vstack>
-                            <h2>
-                                {Datas.destinations[0].name}
+                            <h2 >
+                                {selectDesti.activeSelection}
                             </h2>
                             <p className='description'>
-                                {Datas.destinations[0].description}
+                                {description.activeDescription}
                             </p>
                             <AverageDistance>
                                 <Vstack>
@@ -89,7 +105,7 @@ export const Destination = () => {
                                         Avg. distance
                                     </p>
                                     <h6>
-                                        {Datas.destinations[0].distance}
+                                        {distance.activeDistance}
                                     </h6>
                                 </Vstack>
                                 <Vstack>
@@ -97,14 +113,14 @@ export const Destination = () => {
                                         Est. travel time
                                     </p>
                                     <h6 className='h6_destitravel'>
-                                        {Datas.destinations[0].travel}
+                                        {travelTime.activeTravelTime}
                                     </h6>
                                 </Vstack>
                             </AverageDistance>
                         </Vstack>
                     </>
                 )}
-                {selectDesti.activeSelection === 'mars' && (
+                {/* {selectDesti.activeSelection === 'mars' && (
                     <>
                         <Styledimage
                             src={require(`./assets/destination/image-mars.png`)} alt='mars'
@@ -202,7 +218,7 @@ export const Destination = () => {
                             </AverageDistance>
                         </Vstack>
                     </>
-                )}
+                    )} */}
             </Hstackflexi>
         </Destidesc>
     </Styleddesti>
