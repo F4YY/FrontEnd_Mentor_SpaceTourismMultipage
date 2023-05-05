@@ -42,10 +42,6 @@ export const Destidesc = styled(Vstack)`
         text-transform: uppercase;
         margin:135px 274.5px 0 157.5px;
         transition: all 1s ease-in-out;
-        /* //for animation:
-        animation: expand 1s ease-in-out;
-        animation-direction: alternate;
-        animation-iteration-count: 1; */
     }
     h5{
         font-size: 28px;
