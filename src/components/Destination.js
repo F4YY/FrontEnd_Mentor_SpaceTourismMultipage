@@ -113,7 +113,12 @@ export const Destination = () => {
                         <Vstack>
                             <h2
                                 style={{
-                                    color: (destination.activeDestination === 'moon') ? '#55d8f2' : (destination.activeDestination === 'mars') ? '#fc694c' : (destination.activeDestination === 'europa') ? '#b43ffc' : (destination.activeDestination === 'titan') ? '#facc4d' : 'var(--Dark-space)'
+                                    color:
+                                        (destination.activeDestination === Datas.destinations[0].name) ? '#55d8f2' :
+                                        (destination.activeDestination === Datas.destinations[1].name) ? '#fc694c' :
+                                        (destination.activeDestination === Datas.destinations[2].name) ? '#b43ffc' :
+                                        (destination.activeDestination === Datas.destinations[3].name) ? '#facc4d' :
+                                        'var(--Dark-space)'
                                 }}
                             >
                                 {destination.activeDestination}
